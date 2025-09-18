@@ -96,7 +96,7 @@ vacc |>
   filter(doses_per_vaxxed > 3) |> 
   arrange(-doses_per_vaxxed)
 
-vacc |> 
+vr <- vacc |> 
   filter(date == max(date)) |> 
   select(country_region, continent_name, people_at_least_one_dose, population, doses_admin) |>
   mutate(vaxxrate = people_at_least_one_dose / population) |> 
