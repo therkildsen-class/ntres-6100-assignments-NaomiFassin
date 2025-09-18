@@ -24,8 +24,8 @@ Please use the following table to grade the student's assignment:
 
 Assignment 2: <https://github.com/NaomiFassin/assignment2_dataset>
 
-Assignment 3:
+Assignment 3
 
--   Website:
+-   Website: <https://naomifassin.github.io/assignment-3-nf295/>
 
--   Repo:
+-   Repo: <https://github.com/NaomiFassin/assignment-3-nf295>
