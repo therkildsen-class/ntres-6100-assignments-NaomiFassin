@@ -1,6 +1,6 @@
 ---
 title: "Assignment_5"
-format: html
+format: gfm
 editor: visual
 ---
 
