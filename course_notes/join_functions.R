@@ -71,3 +71,25 @@ airports2 <- airports |>
 flights2 |> 
   left_join(airports2, join_by(origin == faa)) |> 
   left_join(airports2, join_by(dest == faa), suffix = c("_origin", "_dest"))
+
+flights2 <- flights |>
+  select(year:day, hour, origin, dest, tailnum, carrier)
+
+airports |> 
+  semi_join(flights2, join_by(faa == origin))
+
+flights2 |> 
+  anti_join(airports, join_by(dest == faa)) |> 
+  distinct(dest)
+
+planes_gt100 <- flights |> 
+  group_by(tailnum) |> 
+  summarize(count = n()) |> 
+  filter(count >= 100)
+
+planes_gt100 <- flights |> 
+  count(tailnum) |> 
+  filter(count >= 100)
+
+flights |> 
+  semi_join(planes_gt100)
