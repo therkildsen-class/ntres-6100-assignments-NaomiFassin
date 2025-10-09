@@ -56,13 +56,27 @@ tibble(
 data1 <- read.csv("https://raw.githubusercontent.com/nt246/NTRES-6100-data-science/master/datasets/dataset2.txt", header = FALSE)
 
 colnames(data1) <- c("Name", "Weight", "Price")
+
+data1
 ```
+
+        Name Weight Price
+    1  apple      1   2.9
+    2 orange      2   4.9
+    3 durian     10  19.9
 
 #### 1.3 Import `https://raw.githubusercontent.com/nt246/NTRES-6100-data-science/master/datasets/dataset3.txt` into R. Watch out for the first few lines, missing values, separators, quotation marks, and deliminaters.
 
 ``` r
 data2 <- read.csv("https://raw.githubusercontent.com/nt246/NTRES-6100-data-science/master/datasets/dataset3.txt", quote = "/", skip = 2, na = c("Not Available", "?"), header = TRUE, sep = ";")
+
+data2
 ```
+
+        Name Weight Price
+    1  apple      1   2.9
+    2 orange      2    NA
+    3 durian     NA  19.9
 
 ## Exercise 2. Weather station
 
